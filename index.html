@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BitX</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body translate="no">
+  <section>
+    <div class="container">
+      <h1>Some animations of our products</h1>
+      <ul class="grid">
+        <li>
+          <figure>
+            <figcaption>
+              <p>MOOBI</p>
+            </figcaption>
+            <div id="moobi" class="animated"></div>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <figcaption>
+              <p>MOOBI CHRISTMAS</p>
+            </figcaption>
+            <div id="moobi-christmas" class="animated"></div>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <figcaption>
+              <p>OTTETO</p>
+            </figcaption>
+            <div id="otteto" class="animated"></div>
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+  <script id="rendered-js">
+    const animatedEls = document.querySelectorAll(".animated");
+
+    for (const animatedEl of animatedEls) {
+      const id = animatedEl.id;
+      lottie.loadAnimation({
+        container: document.getElementById(id),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: `animations/${id}.json`
+      });
+      // path: `https://assets.codepen.io/162656/${id}.json`
+      
+    }
+  </script>
+</body>
+</html>

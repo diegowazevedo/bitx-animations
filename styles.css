@@ -1,0 +1,109 @@
+:root {
+  --black: #05122f;
+  --lightbeize: #fdfdee;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  margin: 50px 0 100px;
+  text-align: center;
+  color: var(--black);
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+/* MAIN STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.grid {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 50px;
+}
+
+.grid li {
+  display: flex;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: auto;
+}
+
+.grid li figure figcaption p {
+  font-size: 30px;
+  margin: 20px;
+}
+
+.animated {
+  width: 100%;
+  height: 20em;
+}
+
+.grid figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.grid figcaption {
+  margin-top: 20px;
+}
+
+.grid .counter {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  max-width: 80px;
+}
+
+#moobi {
+  background: #b438bb;
+}
+
+#moobi-christmas {
+  background: #b438bb;
+}
+
+#otteto {
+  background: #e83c3f;
+}
+
+
+@media screen and (max-width: 920px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
